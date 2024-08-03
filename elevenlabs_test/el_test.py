@@ -4,7 +4,7 @@ from pydub import AudioSegment
 import io
 
 client = ElevenLabs(
-  api_key="sk_a884f6fef6dbc3b5d4f8b50d6e29aaa9e4398840fc5f5e3b", # Defaults to ELEVEN_API_KEY
+  api_key="", # Defaults to ELEVEN_API_KEY
 )
 
 def text_stream():
