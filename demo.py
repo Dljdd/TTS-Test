@@ -50,3 +50,20 @@ def transcribe_and_stretch_audio(input_mp3_file, output_mp3_file, stretch_factor
     except Exception as e:
         print(f"Error in transcribe_and_stretch_audio: {str(e)}")
         return None
+
+
+# Sample usage of the transcribe_and_stretch_audio function
+
+input_mp3_file = "dialogue.mp3"  # Path to your input MP3 file
+output_mp3_file = "./stretched_audio/output_audio.mp3"  # Path where the stretched MP3 will be saved
+stretch_factor = 1.2  # Example stretch factor, you can change it as needed
+
+# Call the function
+word_timestamps = transcribe_and_stretch_audio(input_mp3_file, output_mp3_file, stretch_factor)
+
+# Print the word-level timestamps
+if word_timestamps:
+    print("Word-level Timestamps:")
+    print(json.dumps(word_timestamps, indent=2))
+else:
+    print("Transcription and stretching failed.")
